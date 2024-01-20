@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!-- setting -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- esse preconec conecta ao google para pegar o fonte (é um API)-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- importe de css -->
+    <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/main.css">
+
+    <title>detona raulph</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="manu">
+
+            <div class="manu-time">
+                <h2 style="color: red;">Time left</h2>
+                <h2 id="time-left">0</h2>
+            </div>
+            
+            <div class="menu-score">
+                <h2 style="color: red;">Your Score</h2>
+                <h2 id="score">0</h2>
+            </div>
+
+            <div class="menu-live">
+                <img src="./src/image/player.png" alt="foto do jogador" height="60px">
+                <h2>x3</h2>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelrow">
+                <div class="squere enemy" id="1"></div>
+                <div class="squere" id="2"></div>
+                <div class="squere " id="3"></div><!-- o class pode ter dois valor separado por espaço-->
+            </div>
+
+            <div class="panelrow">
+                <div class="squere" id="4"></div>
+                <div class="squere" id="5"></div>
+                <div class="squere" id="6"></div>
+            </div>
+
+            <div class="panelrow">
+                <div class="squere" id="7"></div>
+                <div class="squere" id="8"></div>
+                <div class="squere" id="9"></div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- import js -->
+    <script defer src="./src/secript/engine.js"></script>
+    <!-- normalmente o arquivo js é inserido em ultimo pois para evitar que seja lido antes de terminar de carregar a pagina, é a boa pratica
+    tem o atributo "defere" para indicar que o script seja lido depois de carregar todo html
+    -->
+</body>
+</html>
