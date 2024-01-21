@@ -1,0 +1,7 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;/* vai de largura a borda a borda*/
+    outline: none; /* tila efeito de tab*/
+    font-family: 'Poppins', sans-serif;  
+}

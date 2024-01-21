@@ -1,0 +1,130 @@
+body{
+    /* deixando em centro as coisas*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    background-color: rgb(182, 228, 212);
+}
+
+.container{
+    width: 780px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 35px 40px;
+}
+
+.container header{
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2{
+    font-size: 1.6rem;/* pega tamanho do dispoasitivo*/
+}
+
+header .colum{
+    display: flex;
+    align-items: center;
+}
+
+header .colum span{
+    font-weight: 500px;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input{
+    accent-color: #fff;
+}
+
+/* Sobre o position:relative e absolute
+    O position defini como o elemento pode ser posisionado renderisado em documento --> como é desenhado o div
+    reative--> elemento é encaixado, desloca em seu eixo
+    absolute-->posicionado a relacao ao seu ansestrau
+*/
+.keys-check input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    background-color: #4b4b4b;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.keys-check input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #8c8c8c;
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit; /* o valor é erado do pai*/
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* diferenca de : e :: --> : é um efeito, :: é um puseudo elemento*/
+.keys-check input:checked::before{
+    left: 2.1rem;
+    background-color: #fff;
+}
+
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-keys .key{
+    cursor: pointer;
+    list-style: none;
+    color: #a2a2a2;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.piano-keys .white{
+    width: 70px;
+    height: 230px;
+    border: 1px solid black;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 8px;
+}
+
+.piano-keys .black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;/* cria um outro dimencao*/
+    margin: 0 -22px 0 -22px;
+    border: 1px solid black;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+}
+
+.piano-keys span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+}
+
+.piano-keys .white.active{
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+
+.piano-keys .black.active{
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom #000, #434343);
+  }
+
+  .piano-keys .key.hide span{
+    display: none;
+  }
